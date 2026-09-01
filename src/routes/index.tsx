@@ -29,6 +29,13 @@ const capabilities = [
   ["11", "AI that edits", "Surgical code edits applied live. Accept or reject, then run in one click."],
 ];
 
+const pipelineSteps = [
+  ["01", "ASK", "Start with a question, a dataset, or a rough Python idea."],
+  ["10", "COMPUTE", "A real Python runtime executes locally through WebAssembly."],
+  ["11", "SEE", "Charts, tables, and statistical output appear in the same workspace."],
+  ["100", "REFINE", "AI applies precise edits while you stay in control of the code."],
+];
+
 function BinaryRail() {
   return (
     <div className="binary-rail" aria-hidden="true">
@@ -41,6 +48,23 @@ function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`logo-crop ${className}`}>
       <img src={logoAsset.url} alt="RUN01" />
+    </div>
+  );
+}
+
+function ComputeModel() {
+  return (
+    <div className="compute-model" aria-hidden="true">
+      <div className="data-orbit orbit-a"><i /><i /><i /><i /></div>
+      <div className="data-orbit orbit-b"><i /><i /><i /><i /></div>
+      <div className="compute-core">
+        <span>PY</span><span>WASM</span><span>LOCAL</span><span>01</span><span>RUN</span><span>DATA</span>
+      </div>
+      <div className="chart-plane">
+        <i /><i /><i /><i /><i /><i /><i />
+      </div>
+      <div className="code-planes"><span>+ model.fit()</span><span>→ result.plot()</span><span>✓ output.ready</span></div>
+      <div className="model-shadow" />
     </div>
   );
 }
@@ -109,6 +133,28 @@ function Index() {
               <h3>{title}</h3>
               <p>{description}</p>
               <div className="pixel-rule" />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="pipeline-section" aria-labelledby="pipeline-title">
+        <div className="pipeline-visual">
+          <div className="pipeline-sticky">
+            <div className="pipeline-label"><span>RUN01://PIPELINE</span><span>SCROLL_TO_COMPUTE</span></div>
+            <ComputeModel />
+            <div className="pipeline-readout"><span>INPUT</span><strong>IDEA</strong><span>OUTPUT</span><strong>MODEL</strong></div>
+          </div>
+        </div>
+        <div className="pipeline-copy">
+          <div className="pipeline-intro">
+            <p className="kicker">ONE CONTINUOUS WORKFLOW</p>
+            <h2 id="pipeline-title">THOUGHT BECOMES<br />COMPUTE.</h2>
+          </div>
+          {pipelineSteps.map(([number, title, description]) => (
+            <article className="pipeline-step" key={number}>
+              <span>{number}</span>
+              <div><h3>{title}</h3><p>{description}</p></div>
             </article>
           ))}
         </div>
