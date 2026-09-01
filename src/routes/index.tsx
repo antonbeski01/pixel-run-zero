@@ -74,7 +74,6 @@ function Index() {
         <div className="hero-visual">
           <div className="corner-code">[ 01 ]<br />LOCAL_EXEC</div>
           <img src={heroAsset.url} alt="RUN01 browser Python IDE running a financial data model" />
-          <div className="pixel-spark" aria-hidden="true">✦</div>
         </div>
       </section>
 
