@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Check, Play } from "lucide-react";
-import heroAsset from "../assets/run01-hero.png.asset.json";
+import heroAsset from "../assets/run01-product-wide.png.asset.json";
 import logoAsset from "../assets/run01-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -62,6 +62,9 @@ function Index() {
 
       <section id="top" className="hero-grid">
         <div className="hero-copy">
+          <div className="floating-pixels" aria-hidden="true">
+            <i /><i /><i /><i /><i />
+          </div>
           <div className="eyebrow"><span className="status-dot" /> PYTHON // ONLINE</div>
           <h1>IDEAS IN.<br /><span>MODELS OUT.</span></h1>
           <p className="hero-lede">A full data science stack in your browser. No installation. No server. No waiting.</p>
@@ -74,6 +77,8 @@ function Index() {
         <div className="hero-visual">
           <div className="corner-code">[ 01 ]<br />LOCAL_EXEC</div>
           <img src={heroAsset.url} alt="RUN01 browser Python IDE running a financial data model" />
+          <div className="glass-stat glass-stat-a"><span>RUNTIME</span><strong>LOCAL</strong></div>
+          <div className="glass-stat glass-stat-b"><span>COMPUTE</span><strong>0.00</strong></div>
         </div>
       </section>
 
@@ -90,6 +95,9 @@ function Index() {
       </section>
 
       <section id="stack" className="capabilities-section">
+        <div className="cube-scene" aria-hidden="true">
+          <div className="pixel-cube"><span /><span /><span /><span /><span /><span /></div>
+        </div>
         <div className="section-heading">
           <p className="kicker">BUILT FOR THINKERS</p>
           <h2>EVERYTHING BETWEEN<br />QUESTION &amp; ANSWER.</h2>
