@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowUpRight, Check, Play } from "lucide-react";
-import heroAsset from "../assets/run01-product-wide.png.asset.json";
+import heroAsset from "../assets/run01-product-full-color.png.asset.json";
 import logoAsset from "../assets/run01-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
